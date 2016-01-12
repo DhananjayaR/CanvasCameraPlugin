@@ -99,6 +99,13 @@ function onStartClicked()
 }
 ```
 
+### stop
+stop video preview, then CPU and Memory consumption will drop.<br>
+
+```javascript
+window.CanvasCamera.stop();
+```
+
 ### takePicture
 take a photo.<br>
 
@@ -256,6 +263,7 @@ CanvasCamera.PictureSourceType = {
             <br/>
             
             <input type="button" value="Take a picture" onclick="onTakePicture();" />
+            <input type="button" value="Stop preview" onclick="onStopPreview();" />
 
 
         </div>
@@ -327,6 +335,12 @@ CanvasCamera.PictureSourceType = {
             function onTakeSuccess(data) {
                 //
             }
+            
+            function onStopPreview() {
+                CanvasCamera.stop();
+            }
+            
+
         </script>
     </body>
 </html>
